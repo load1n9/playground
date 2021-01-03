@@ -2,8 +2,7 @@ FROM gitpod/workspace-full
 
 USER root
 
-RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb \
-    && dpkg -i erlang-solutions_1.0_all.deb \
-    && apt-get update \
-    && apt-get install esl-erlang -y \
-    && apt-get install elixir -y
+RUN wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb 
+&& sudo dpkg -i erlang-solutions_2.0_all.deb
+&& sudo apt-get install esl-erlang
+&& sudo apt-get install elixir
